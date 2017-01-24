@@ -26,8 +26,15 @@ Task("Default")
 	{
 	});
 
-Task("Build")
+	Task("Restore")
 	.IsDependentOn("Clean")
+	.Does(() =>
+	{
+		NuGetRestore("./Frozenskys.Helpers.sln");
+	});
+
+Task("Build")
+	.IsDependentOn("Restore")
 	.Does(() =>
 	{
 		MSBuild("./Frozenskys.Helpers.sln", settings => settings
