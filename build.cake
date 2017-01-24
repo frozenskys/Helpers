@@ -47,13 +47,20 @@ Task("Build")
 				.WithTarget("Rebuild"));
 	});
 
-Task("Package")
+Task("Test")
 	.IsDependentOn("Build")
+	.Does(() => 
+	{
+		MSTest("./build/*.UnitTests.dll");
+	});
+
+Task("Package")
+	.IsDependentOn("Test")
 	.Does(() =>
 	{
 		var nuGetPackSettings   = new NuGetPackSettings {
                                      Id                      = "Frozenskys.Helpers",
-                                     Version                 = "0.0.2.0",
+                                     Version                 = "0.1.0.0",
                                      Title                   = "Helpers for .NET Applications",
                                      Authors                 = new[] {"Richard Cooper"},
                                      Description             = "Contains helpers to make writing .NET applications easier",
@@ -63,6 +70,9 @@ Task("Package")
                                      RequireLicenseAcceptance= false,
                                      Symbols                 = false,
                                      NoPackageAnalysis       = true,
+									 Dependencies            = new [] {
+                                                                          new NuSpecDependency {Id="System.IO.Abstractions", Version="2.0.0.140", TargetFramework="net452"},
+                                                                       },
 									 Files                   = new [] {
                                                                           new NuSpecContent {Source = "Frozenskys.Helpers.dll", Target = "bin"},
                                                                        },

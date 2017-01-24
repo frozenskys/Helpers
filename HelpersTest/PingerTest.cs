@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Frozenskys.Helpers;
 using System.Net;
 
-namespace HelpersTest
+namespace Frozenskys.Helpers.UnitTests
 {
     [TestClass]
     public class PingerTest

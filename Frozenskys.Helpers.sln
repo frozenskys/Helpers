@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		build.cake = build.cake
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpersTest", "HelpersTest\HelpersTest.csproj", "{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frozenskys.Helpers.UnitTests", "HelpersTest\Frozenskys.Helpers.UnitTests.csproj", "{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
