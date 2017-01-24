@@ -12,3 +12,6 @@ test: off
 # Build cache
 cache:
 - tools -> build.cake
+
+artifacts:
+- path: artifacts\*
