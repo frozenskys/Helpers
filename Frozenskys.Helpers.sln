@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frozenskys.Helpers", "Frozenskys.Helpers\Frozenskys.Helpers.csproj", "{379E1E59-1928-4277-B95F-9FC8E1A31732}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F13ABE9-9665-49DC-9E93-3FAF0EDB766B}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpersTest", "HelpersTest\HelpersTest.csproj", "{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{379E1E59-1928-4277-B95F-9FC8E1A31732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{379E1E59-1928-4277-B95F-9FC8E1A31732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{379E1E59-1928-4277-B95F-9FC8E1A31732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB8A80F-9B8A-4C6F-8316-8F68D86A3A6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
