@@ -65,7 +65,7 @@ Task("Package")
                                      Authors                 = new[] {"Richard Cooper"},
                                      Description             = "Contains helpers to make writing .NET applications easier",
                                      ProjectUrl              = new Uri("https://github.com/frozenskys/helpers/"),
-                                     LicenseUrl              = new Uri("https://github.com/frozenskys/helpers/blob/master/LICENSE.md"),
+                                     LicenseUrl              = new Uri("https://frozenskys.mit-license.org/"),
                                      Copyright               = "Frozenskys Software Ltd. 2017",
                                      RequireLicenseAcceptance= false,
                                      Symbols                 = false,
