@@ -15,3 +15,9 @@ cache:
 
 artifacts:
 - path: artifacts\*
+
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/frozenskys/api/v2/package
+  api_key:
+    secure: CCRJd2JR9N5auUK9y4bu134vWE8yrAgahSPNWvRyhJIKOUGWaqC/wpp9Q5KrG6d+
