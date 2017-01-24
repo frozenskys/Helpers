@@ -7,23 +7,19 @@
     {
         public string Send(IPAddress address)
         {
-            using (var sckt = new TcpClient())
+            var status = "";
+            using (var client = new TcpClient())
             {
-                try
+                if (!client.ConnectAsync(address, 443).Wait(1000))
                 {
-                    sckt.Connect(address, 443);
-                    if (sckt.Connected)
-                    {
-                        sckt.Close();
-                        return "Ok";
-                    }
+                    status = "No Connection";
                 }
-                catch
+                else
                 {
-                    return "No Connection";
+                    status = "Ok";
                 }
             }
-            return "Errm";
+            return status;
         }
     }
 }
