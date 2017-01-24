@@ -53,10 +53,9 @@ Task("Package")
 	{
 		var nuGetPackSettings   = new NuGetPackSettings {
                                      Id                      = "Frozenskys.Helpers",
-                                     Version                 = "0.0.1.0",
+                                     Version                 = "0.0.2.0",
                                      Title                   = "Helpers for .NET Applications",
-                                     Authors                 = new[] {"John Doe"},
-                                     Owners                  = new[] {"Contoso"},
+                                     Authors                 = new[] {"Richard Cooper"},
                                      Description             = "Contains helpers to make writing .NET applications easier",
                                      ProjectUrl              = new Uri("https://github.com/frozenskys/helpers/"),
                                      LicenseUrl              = new Uri("https://github.com/frozenskys/helpers/blob/master/LICENSE.md"),
@@ -64,11 +63,14 @@ Task("Package")
                                      RequireLicenseAcceptance= false,
                                      Symbols                 = false,
                                      NoPackageAnalysis       = true,
+									 Files                   = new [] {
+                                                                          new NuSpecContent {Source = "Frozenskys.Helpers.dll", Target = "bin"},
+                                                                       },
                                      BasePath                = buildFolder,
                                      OutputDirectory         = artifacts
                                  };
 
-     NuGetPack("./Frozenskys.Helpers/Frozenskys.Helpers.csproj", nuGetPackSettings);
+     NuGetPack(nuGetPackSettings);
 	});
 
 RunTarget(target);
