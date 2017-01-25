@@ -74,7 +74,7 @@ Task("Package")
                                                                           new NuSpecDependency {Id="System.IO.Abstractions", Version="2.0.0.140", TargetFramework="net452"},
                                                                        },
 									 Files                   = new [] {
-                                                                          new NuSpecContent {Source = "Frozenskys.Helpers.dll", Target = "bin"},
+                                                                          new NuSpecContent {Source = "Frozenskys.Helpers.dll", Target = "lib"},
                                                                        },
                                      BasePath                = buildFolder,
                                      OutputDirectory         = artifacts
