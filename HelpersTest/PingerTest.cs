@@ -17,9 +17,15 @@ namespace Frozenskys.Helpers.UnitTests
         }
 
         [TestMethod]
-        public void ConnectToGooglePasses()
+        public void ConnectToGoogleDefaultPortPasses()
         {
             Assert.AreEqual("Ok", _pinger.Send(IPAddress.Parse("216.58.198.110").MapToIPv4()));
+        }
+
+        [TestMethod]
+        public void ConnectToGooglePort443Passes()
+        {
+            Assert.AreEqual("Ok", _pinger.Send(IPAddress.Parse("216.58.198.110").MapToIPv4(), 443));
         }
     }
 }
