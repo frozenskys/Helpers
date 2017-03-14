@@ -21,6 +21,14 @@ namespace Frozenskys.Helpers.UnitTests
         }
 
         [TestMethod]
+        public void TestDefaultConstructor()
+        {
+
+            var writer = new FileLineWriter(@"c:\test2.txt");
+            Assert.IsNotNull(writer);
+        }
+
+        [TestMethod]
         public void TestWriteLineToNewFile()
         {
 
