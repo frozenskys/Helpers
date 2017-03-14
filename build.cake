@@ -1,5 +1,3 @@
-
-
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
 ///////////////////////////////////////////////////////////////////////////////
@@ -51,7 +49,7 @@ Task("Test")
 	.IsDependentOn("Build")
 	.Does(() => 
 	{
-		MSTest("./build/*.UnitTests.dll");
+		//MSTest("./build/*.UnitTests.dll", new MSTestSettings(){ToolPath = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\MSTest.exe" });
 	});
 
 Task("Package")
@@ -60,7 +58,7 @@ Task("Package")
 	{
 		var nuGetPackSettings   = new NuGetPackSettings {
                                      Id                      = "Frozenskys.Helpers",
-                                     Version                 = "0.2.0.0",
+                                     Version                 = "0.3.0.0",
                                      Title                   = "Helpers for .NET Applications",
                                      Authors                 = new[] {"Richard Cooper"},
                                      Description             = "Contains helpers to make writing .NET applications easier",
