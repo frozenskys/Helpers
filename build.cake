@@ -58,7 +58,7 @@ Task("Package")
 	{
 		var nuGetPackSettings   = new NuGetPackSettings {
                                      Id                      = "Frozenskys.Helpers",
-                                     Version                 = "0.3.0.0",
+                                     Version                 = "0.3.1.0",
                                      Title                   = "Helpers for .NET Applications",
                                      Authors                 = new[] {"Richard Cooper"},
                                      Description             = "Contains helpers to make writing .NET applications easier",
